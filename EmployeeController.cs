@@ -37,6 +37,7 @@ namespace Hotel_API_Project.Controllers.ApiControllers
             List<EmployeeApplicationUser> employees = iEmployeeRepository.GetEmployees();
             List<PositionApplicationRole> positions = iPositionRepository.GetPositions();
             /*encoding(against xss) at the get request, so as to store the entity column in its plain form in the database*/
+			/*ADDED FIX!*/
             if (employees != null)
             {
                 employees.ForEach(x =>
